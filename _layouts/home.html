@@ -3,16 +3,16 @@ layout: default
 ---
 
 <div class="home">
-  <!--{%- if page.title -%}
+  {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}-->
+  {%- endif -%}
 
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
     <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
     <ul class="post-list">
-      {% for post in paginator.posts %}
+      {%- for post in site.posts -%}
       <li>
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
@@ -30,7 +30,7 @@ layout: default
     <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
   {%- endif -%}
 
-  <!-- Pagination links -->
+  <!-- Pagination links
   <div class="pagination">
     {% if paginator.previous_page %}
       <a href="{{ paginator.previous_page_path }}" class="previous">
@@ -47,6 +47,6 @@ layout: default
     {% else %}
       <span class="next ">Next &rarr;</span>
     {% endif %}
-  </div>
+  </div>-->
 
 </div>
