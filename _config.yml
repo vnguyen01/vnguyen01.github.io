@@ -36,10 +36,15 @@ plugins:
   - jekyll-feed
   - jekyll-katex
   - jekyll-sitemap
+  - jekyll-paginate-v2
 
-tag_page_layout: tag_page
-tag_page_dir: tag
-tag_permalink_style: pretty
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: '/page/:num/'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
