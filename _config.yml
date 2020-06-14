@@ -27,6 +27,9 @@ github_username:  jekyll
 # Build settings
 markdown: kramdown
 
+sass:
+  sass_dir: assets/css
+
 # Remove theme and put _layouts, _includes, and _sass in main directory
 # theme: minima
 plugins:
