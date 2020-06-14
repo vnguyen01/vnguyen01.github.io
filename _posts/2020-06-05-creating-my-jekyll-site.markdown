@@ -1,8 +1,12 @@
 ---
 layout: post
 title:  "Creating My Jekyll Site"
+date: 2020-06-12 4:00:00
 description: Trying to get a working locally hosted Jekyll site into Github Pages isn't seamless.
  I also add Bootstrap on top of the Minima theme to get a dynamic table of contents. 
+tags: 
+    - jekyll
+    - github
 ---
 ## Jekyll Minima Site from Scratch
 I had no idea what Jekyll is but heard that it's an easy way to set up a clean website for a blog. I still found several 
@@ -218,3 +222,7 @@ I'll revisit these later if I ever write more than 5 posts. Unfortunately, [Gith
  the newer 
 version of `jekyll-paginate` called `jekyll-paginate-v2` which makes things much simpler and can also paginate tags. I was able 
 to get pagination and keyword tagging to work locally only with this [tutorial](https://anavarre.net/rebuilding-my-blog-with-jekyll/). 
+
+I stumbled upon this [tutorial on creating tagging using Jekyll's liquid templating](https://longqian.me/2017/02/09/github-jekyll-tag/). 
+This solution worked for me. As the author notes, creating a page of tags is still a manual process. I might try to develop a 
+solution that works when I build and serve in the future.
