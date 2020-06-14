@@ -23,7 +23,7 @@ At this point, it turns out that none of the themes was Minima, so I clicked on 
 I merged, basically overriding all the files in `master` since it was just the chosen theme with none of my previous work. This time, 
 I made sure to have the theme explicitly specified as `theme: minima` in `_config.yml` before I merged and pushed.
 
-One thing that is *very* annoying is a page might look normal when serve locally but not so when served by Github... and 
+One thing that is *very* annoying is a page might look normal when served locally but not so when served by Github... and 
 for this the only thing I can do is to commit and test often!
 
 ## Override and Customize Minima Theme
@@ -209,9 +209,8 @@ in the TOC that comes from the footer. This is because the footer is still part 
 <!--<h2 class="footer-heading">{{ site.title | escape }}</h2>-->
 ```
 
-## Keyword Tags
-
-## Pagination
-I'll revisit that later if I ever write more than 5 posts. Unfortunately, [Github Pages doesn't yet support](https://pages.github.com/versions/)
+## Pagination and Keyword Tagging
+I'll revisit these later if I ever write more than 5 posts. Unfortunately, [Github Pages doesn't yet support](https://pages.github.com/versions/)
  the newer 
-version of `jekyll-paginate` called `jekyll-paginate-v2` which makes things much simplier and can also paginate tags.
+version of `jekyll-paginate` called `jekyll-paginate-v2` which makes things much simpler and can also paginate tags. I was able 
+to get pagination and keyword tagging to work locally only with this [tutorial](https://anavarre.net/rebuilding-my-blog-with-jekyll/). 
