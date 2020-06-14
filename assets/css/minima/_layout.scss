@@ -24,8 +24,15 @@
   }
 }
 
+// label for nav-trigger keeps having inline-block
+.label-nav-trigger{
+    display: none;
+    margin-bottom: 0px;
+}
+
 .site-nav {
   float: right;
+  z-index: 1;
   line-height: $base-line-height * $base-font-size * 2.25;
 
   .nav-trigger {
@@ -37,6 +44,8 @@
   }
 
   .page-link {
+    border:none;
+    display:inline;
     color: $text-color;
     line-height: $base-line-height;
 
