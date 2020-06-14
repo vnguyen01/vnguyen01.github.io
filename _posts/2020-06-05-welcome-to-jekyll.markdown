@@ -155,25 +155,17 @@ normally sits to instead be
 
 ```
 <div class="row">
-    <div class="col-sm-3">
-        <nav id="toc" data-toggle="toc" class="sticky-top"></nav>
+  <div class="col-sm-3">
+    <nav id="toc" data-toggle="toc" class="sticky-top"></nav>
+  </div>
+  <div class="col-sm-9">
+    <header class="post-header">
+      ...
+    </header>
+    <div class="post-content e-content" itemprop="articleBody">
+     ...
     </div>
-    <div class="col-sm-9">
-      <header class="post-header">
-        <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-        <p class="post-meta">
-          <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-            {{ page.date | date: date_format }}
-          </time>
-          {%- if page.author -%}
-            • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-          {%- endif -%}</p>
-      </header>
-      <div class="post-content e-content" itemprop="articleBody">
-      {{ content }}
-      </div>
-    </div>  
+  </div>  
 </div>
 ```
 
@@ -210,10 +202,6 @@ better to have it in the `_includes/footer.html` file before the `<footer>` tag.
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 ```
 
-## Keyword Tags
-
-## Pagination
-
 Re-building the site and serving it should hopefully display the TOC. One might notice that there's an additional item 
 in the TOC that comes from the footer. This is because the footer is still part of the body and the TOC will detect 
 `<h2>`, `<h3>`, `<h4>` headers. To fix this, I'll just comment out the heading within `_includes/footer.html` for now:
@@ -221,3 +209,7 @@ in the TOC that comes from the footer. This is because the footer is still part 
 ```
 <!--<h2 class="footer-heading">{{ site.title | escape }}</h2>-->
 ```
+
+## Keyword Tags
+
+## Pagination
