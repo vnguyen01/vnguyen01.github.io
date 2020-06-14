@@ -21,7 +21,7 @@ github_username:  vnguyen01
 
 # Build settings
 markdown: kramdown
-
+show_excerpts: true
 sass:
   sass_dir: assets/css
 

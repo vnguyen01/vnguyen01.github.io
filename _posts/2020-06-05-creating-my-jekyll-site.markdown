@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "Creating My Jekyll Site"
+description: Trying to get a working locally hosted Jekyll site into Github Pages isn't seamless.
+ I also add Bootstrap on top of the Minima theme to get a dynamic table of contents. 
 ---
 ## Jekyll Minima Site from Scratch
 I had no idea what Jekyll is but heard that it's an easy way to set up a clean website for a blog. I still found several 
