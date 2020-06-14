@@ -1,0 +1,50 @@
+---
+layout: post
+title:  "KaTeX for Github Pages"
+date: 2020-06-14 4:00:00
+description: KaTeX is a JavaScript library that renders LaTeX faster than MathJax. Unfortunately, Github Pages does not support the jekyll-katex plugin, but there is a way around that by building the site locally and pushing the contents of the site to master.
+
+tags: 
+    - jekyll
+    - github
+    - katex
+    - latex
+---
+## What Happens on GitHub
+When you push the code of your static website to Github, Github builds and serves the site much like how you 
+can locally build and serve the site. Now, here's an important distinction I never picked up on from the [tutorial](https://help.github.com/en/github/working-with-github-pages/creating-a-github-pages-site):
+1. If you're pushing to a directory named `USERNAME.github.io`, then you are setting up a user website, and 
+the code *must* be pushed to the `master` branch.
+2. If you're not pushing to a directory named as such, then you're setting up a project website, and the code *needs* 
+to go into a branch named `gh-pages`.
+
+### Dependencies and Plug-ins
+Github Pages provides a really nice service of hosting these static sites. It comes with a caveat though which is only 
+[certain plug-ins will be supported](https://pages.github.com/versions/). This means that some of the newer ones that people 
+use a lot on non-Github Pages hosted sites such as `jekyll-paginate-v2` and `jekyll-tagging` will not let your site be 
+built and served by Github.
+
+One of these unsupported plug-ins is `jekyll-katex`. I'll try to explain how I got it to 'work' on Github Pages.
+
+## Getting KaTeX to Work
+[KaTeX](https://katex.org/) was developed by Khan Academy. There are a few Jekyll plug-ins for it, and the one I used is 
+`jekyll-katex` where more documentation can be found [here](https://github.com/linjer/jekyll-katex). First, let's go 
+through the steps of getting it to work *locally*.
+
+### Locally Building and Serving
+As per the instructions we'll have to include the plug-in in our `_config.yml` and also in the `Gemfile`. Next, 
+we need to run `bundle install` to make sure the dependency will be installed within `vendor/bundle`.
+
+Next, we want to link the CSS needed by putting the following within the `<head>` tag of the `_includes/head.html` file:
+
+```
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+```
+
+For me, rebuilding and serving the site allows {% katex %}\KaTeX{% endkatex %} to render! FYI, I sometimes get a warning:
+
+```
+Found a Liquid block containing the excerpt separator "\n\n". 
+```
+
+when I encapsulate my entire post in a mixed environment tag. This [open issue references the warning](https://github.com/linjer/jekyll-katex/issues/25).
