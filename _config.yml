@@ -32,8 +32,10 @@ sass:
 
 # Remove theme and put _layouts, _includes, and _sass in main directory
 # theme: minima
-plugins:
-  - jekyll-feed
+group :jekyll_plugins do
+  gem "jekyll-paginate-v2"
+  gem "jekyll-feed"
+end
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
