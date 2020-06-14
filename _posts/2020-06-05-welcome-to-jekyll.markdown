@@ -78,7 +78,8 @@ bundle exec jekyll serve
 ## Fix Several Styling Issues
 If we navigate to localhost to see the result of the site, we'll notice that some formatting appears 
 messed up, or at least on my computer it does. The buttons in the navigation bar have a border and don't 
-seem to appear on the same line as the title. Also, some of the icons in the footer appear squished. Now, there's probably a much better way to fix this, but after some experimenting with the developer tools in 
+seem to appear on the same line as the title. Also, some of the icons in the footer appear squished. 
+Now, there's probably a much better way to fix this, but after some experimenting with the developer tools in 
 a browser, these styling fixes seemed to fix everything.
 
 ### Navbar
@@ -119,7 +120,7 @@ transparent with the background of the site. To fix this, I just made the naviga
 
 ### Svg icons
 The social media icons on the bottom looked squished. I couldn't figure out a more clever way to fix that 
-so I created a new file `assets/css/custom.css` and added in
+so edited the `assets/css/minima/_base.scss` file for the relevant class to be
 
 ```
 .svg-icon {
