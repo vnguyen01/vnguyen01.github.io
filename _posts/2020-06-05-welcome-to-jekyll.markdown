@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  "Creating My Jekyll Site"
-categories: jekyll update
+tags:
+    - jekyll
 ---
 ## Jekyll Minima Site from Scratch
 I had no idea what Jekyll is but heard that it's an easy way to set up a clean website for a blog. I still found several 
