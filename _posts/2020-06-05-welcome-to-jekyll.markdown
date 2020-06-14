@@ -23,3 +23,5 @@ At this point, it turns out that none of the themes was Minima, so I clicked on 
 `gh-pages` into `master`, so now I have a working website at least but everything I want is still in the other branch. 
 I merged, basically overriding all the files in `master` since it was just the chosen theme with none of my previous work. This time, 
 I made sure to have the theme explicity specified as `theme: minima` in `_config.yml` before I merged and pushed.
+
+### Random Text for Now
