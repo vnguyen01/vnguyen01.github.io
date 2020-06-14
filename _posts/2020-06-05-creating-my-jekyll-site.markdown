@@ -82,7 +82,9 @@ If we navigate to localhost to see the result of the site, we'll notice that som
 messed up, or at least on my computer it does. The buttons in the navigation bar have a border and don't 
 seem to appear on the same line as the title. Also, some of the icons in the footer appear squished. 
 Now, there's probably a much better way to fix this, but after some experimenting with the developer tools in 
-a browser, these styling fixes seemed to fix everything.
+a browser, these styling fixes seemed to fix everything. 
+
+![Asset](/assets/img/bootstrap_style.png)
 
 ### Navbar
 Within `assets/css/minima/_layout.scss`, I added in
