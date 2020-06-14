@@ -212,3 +212,6 @@ in the TOC that comes from the footer. This is because the footer is still part 
 ## Keyword Tags
 
 ## Pagination
+I'll revisit that later if I ever write more than 5 posts. Unfortunately, [Github Pages doesn't yet support](https://pages.github.com/versions/)
+ the newer 
+version of `jekyll-paginate` called `jekyll-paginate-v2` which makes things much simplier and can also paginate tags.

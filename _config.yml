@@ -36,15 +36,7 @@ plugins:
   - jekyll-feed
   - jekyll-katex
   - jekyll-sitemap
-  - jekyll-paginate-v2
 
-pagination:
-  enabled: true
-  per_page: 5
-  permalink: '/page/:num/'
-  limit: 0
-  sort_field: 'date'
-  sort_reverse: true
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
