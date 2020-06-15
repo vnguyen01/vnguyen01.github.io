@@ -47,7 +47,8 @@ For me, rebuilding and serving the site allows {% katex %}\KaTeX{% endkatex %} t
 Found a Liquid block containing the excerpt separator "\n\n". 
 ```
 
-when I encapsulate my entire post in a mixed environment tag. This [open issue references the warning](https://github.com/linjer/jekyll-katex/issues/25).
+when I encapsulate my entire post in a mixed environment tag. This [open issue references the warning](https://github.com/linjer/jekyll-katex/issues/25). 
+{% katexmm %}$\KaTeX${% endkatexmm %} is powerful because it comes with some packages already installed.
 
 ### Only Serve Content on Github
 
@@ -61,4 +62,20 @@ There were two things that I had to do differently.
 2. I couldn't get the `git remote add origin https://github.com/USERNAME/USERNAME.github.io` to work and had to instead do 
 `git remote set-url origin https://USERNAME@github.com/USERNAME/USERNAME.github.io.git`.
 
-There's also a bash script that is provided to automate this process.
+There's also a bash script that is provided to automate this process but I couldn't get it to work. 
+I have all my source code in a branch called `gh-pages` and the `master` branch lives within the `_site` folder.
+This is what does work for me:
+
+1. Always test locally in the root directory of your project. This is the level where you have the folders `_site`, `_includes`, etc.
+2. When are you ready to commit, be sure to rebuild your site. This regenerates all of the files in `_site`.
+3. `git checkout gh-pages`
+4. `git add .`
+5. `git commit -am 'update source code`
+6. `git push origin gh-pages`
+7. `touch _site/.nojekyll`
+8. `cd _site` We are effectively going into `master` branch now
+9. `git commit -am 'update website html`
+10. `git remote set-url origin https://USERNAME@github.com/USERNAME/USERNAME.github.io.git`
+11. `git push origin master -f`
+
+Real Github users will probably scream at 10 and 11 but this is a big step for me. And so far it works.
