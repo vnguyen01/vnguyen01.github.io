@@ -25,6 +25,8 @@ show_excerpts: true
 sass:
   sass_dir: assets/css
 
+include: [.nojekyll]
+
 # Remove theme and put _layouts, _includes, and _sass in main directory
 # theme: minima
 plugins:

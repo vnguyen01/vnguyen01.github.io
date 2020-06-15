@@ -48,3 +48,17 @@ Found a Liquid block containing the excerpt separator "\n\n".
 ```
 
 when I encapsulate my entire post in a mixed environment tag. This [open issue references the warning](https://github.com/linjer/jekyll-katex/issues/25).
+
+### Only Serve Content on Github
+
+When we build the site, all the HTML goes into the folder `_site`. If we want the website to work for Github Pages, then 
+we need to only upload the contents *inside* `_site` to the `master` branch. However, it's good to keep the source code also 
+in the same repository, but on a separate branch. I followed this [tutorial](https://www.drewsilcock.co.uk/custom-jekyll-plugins) that 
+showed me how to separate the two branches to get this to work.  
+
+There were two things that I had to do differently.
+1. The `git branch --set-upstream master origin/master` command is outdated to I had to do `git branch --set-upstream-to=origin/master master`.
+2. I couldn't get the `git remote add origin https://github.com/USERNAME/USERNAME.github.io` to work and had to instead do 
+`git remote set-url origin https://USERNAME@github.com/USERNAME/USERNAME.github.io.git`.
+
+There's also a bash script that is provided to automate this process.
