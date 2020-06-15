@@ -26,7 +26,7 @@ built and served by Github.
 
 One of these unsupported plug-ins is `jekyll-katex`. I'll try to explain how I got it to 'work' on Github Pages.
 
-## Getting KaTeX (or another other custom plug-in) to Work
+## Getting KaTeX (or Other Custom Plug-in) to Work
 [KaTeX](https://katex.org/) was developed by Khan Academy. There are a few Jekyll plug-ins for it, and the one I used is 
 `jekyll-katex` where more documentation can be found [here](https://github.com/linjer/jekyll-katex). First, let's go 
 through the steps of getting it to work *locally*.

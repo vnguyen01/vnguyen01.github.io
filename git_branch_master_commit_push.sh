@@ -18,7 +18,7 @@ git checkout gh-pages && \
   git commit -am "$1" && \
   git push origin gh-pages && \
   echo "Source successfully pushed to GitHub."
-  jekyll build && \
+  bundle exec jekyll build && \
   touch _site/.nojekyll && \
   cd _site && \
   git add . && \
