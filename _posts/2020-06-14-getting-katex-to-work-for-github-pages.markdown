@@ -85,6 +85,34 @@ include the `.nojekyll` file in `_site` which lets Github know to only generate 
     git push origin master -f
     ```
 
-This is probably not the best practice when it comes to Git...but it does the job. I reformatted these commands into 
+This is probably not the best practice when it comes to Git...but it does the job.
+
+### Bash Script
+I reformatted these commands into 
 the bash script in the tutorial to avoid having to type this out each time and to have the same commit message for both 
 branches.
+
+```
+#!/bin/bash
+
+# https://gist.github.com/drewsberry/1b9fc80682edd8bcecc4
+
+if [[ -z "$1" ]]; then
+  echo "Please enter a git commit message."
+  exit
+fi
+
+git checkout gh-pages && \
+git add . && \
+git commit -am "$1" && \
+git push origin gh-pages && \
+echo "Source successfully pushed to GitHub."
+bundle exec jekyll build && \
+touch _site/.nojekyll && \
+cd _site && \
+git add . && \
+git commit -am "$1" && \
+git push origin master && \
+cd .. && \
+echo "Site successfully build and pushed to GitHub."
+```
