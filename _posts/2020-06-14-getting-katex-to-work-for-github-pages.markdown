@@ -26,7 +26,7 @@ built and served by Github.
 
 One of these unsupported plug-ins is `jekyll-katex`. I'll try to explain how I got it to 'work' on Github Pages.
 
-## Getting KaTeX to Work
+## Getting KaTeX (or another other custom plug-in) to Work
 [KaTeX](https://katex.org/) was developed by Khan Academy. There are a few Jekyll plug-ins for it, and the one I used is 
 `jekyll-katex` where more documentation can be found [here](https://github.com/linjer/jekyll-katex). First, let's go 
 through the steps of getting it to work *locally*.
@@ -67,15 +67,21 @@ I have all my source code in a branch called `gh-pages` and the `master` branch 
 This is what does work for me:
 
 1. Always test locally in the root directory of your project. This is the level where you have the folders `_site`, `_includes`, etc.
-2. When are you ready to commit, be sure to rebuild your site. This regenerates all of the files in `_site`.
-3. `git checkout gh-pages`
-4. `git add .`
-5. `git commit -am 'update source code`
-6. `git push origin gh-pages`
-7. `touch _site/.nojekyll`
-8. `cd _site` We are effectively going into `master` branch now
-9. `git commit -am 'update website html`
-10. `git remote set-url origin https://USERNAME@github.com/USERNAME/USERNAME.github.io.git`
-11. `git push origin master -f`
+   ```
+   bundle exec jekyll serve
+   ```
+   This rebuilds the website where you can see it at your localhost.
+2. When are you ready to commit, be sure to rebuild to regenerate all of the files in `_site`.
+    ```
+    git checkout gh-pages
+    git add .
+    git commit -am 'update source code`
+    git push origin gh-pages
+    touch _site/.nojekyll
+    cd _site
+    git add .
+    git commit -am 'update website html
+    git push origin master -f
+    ```
 
 Real Github users will probably scream at 10 and 11 but this is a big step for me. And so far it works.
