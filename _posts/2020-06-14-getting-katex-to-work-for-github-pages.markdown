@@ -71,7 +71,8 @@ This is what does work for me:
    bundle exec jekyll serve
    ```
    This rebuilds the website where you can see it at your localhost.
-2. When are you ready to commit, be sure to rebuild to regenerate all of the files in `_site`.
+2. When are you ready to commit, be sure to rebuild to regenerate all of the files in `_site`. Be sure to 
+include the `.nojekyll` file in `_site` which lets Github know to only generate the site from the HTML.
     ```
     git checkout gh-pages
     git add .
@@ -80,8 +81,8 @@ This is what does work for me:
     touch _site/.nojekyll
     cd _site
     git add .
-    git commit -am 'update website html
+    git commit -am 'update website html'
     git push origin master -f
     ```
 
-Real Github users will probably scream at 10 and 11 but this is a big step for me. And so far it works.
+This is probably not the best practice when it comes to Git...but it does the job.
