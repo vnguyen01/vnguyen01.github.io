@@ -58,7 +58,7 @@ in the same repository, but on a separate branch. I followed this [tutorial](htt
 showed me how to separate the two branches to get this to work.  
 
 There were two things that I had to do differently.
-1. The `git branch --set-upstream master origin/master` command is outdated to I had to do `git branch --set-upstream-to=origin/master master`.
+1. The `git branch --set-upstream master origin/master` command is outdated so I had to do `git branch --set-upstream-to=origin/master master`.
 2. I couldn't get the `git remote add origin https://github.com/USERNAME/USERNAME.github.io` to work and had to instead do 
 `git remote set-url origin https://USERNAME@github.com/USERNAME/USERNAME.github.io.git`.
 
@@ -85,4 +85,6 @@ include the `.nojekyll` file in `_site` which lets Github know to only generate 
     git push origin master -f
     ```
 
-This is probably not the best practice when it comes to Git...but it does the job.
+This is probably not the best practice when it comes to Git...but it does the job. I reformatted these commands into 
+the bash script in the tutorial to avoid having to type this out each time and to have the same commit message for both 
+branches.
