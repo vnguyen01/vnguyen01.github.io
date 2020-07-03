@@ -16,6 +16,9 @@
 <loc>/about/</loc>
 </url>
 <url>
+<loc>/tag/coin.html</loc>
+</url>
+<url>
 <loc>/tag/github.html</loc>
 </url>
 <url>
@@ -29,5 +32,8 @@
 </url>
 <url>
 <loc>/tag/latex.html</loc>
+</url>
+<url>
+<loc>/tag/probability.html</loc>
 </url>
 </urlset>
