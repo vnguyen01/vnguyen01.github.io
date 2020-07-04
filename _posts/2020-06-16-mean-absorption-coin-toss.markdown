@@ -267,7 +267,7 @@ $$\begin{aligned}
 
 As before, for a fair coin,
 $$
-\begin{aligned}mathbf{N}=
+\begin{aligned}\mathbf{N}=
 \begin{bmatrix}
 8 & 4 & 2\\
      6 & 4 & 2\\
